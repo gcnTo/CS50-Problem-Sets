@@ -5,7 +5,7 @@
 #include <math.h>
 #include <ctype.h>
 
-// Example Terminal Command: ./substitution zyxwvutsrqpomnlkjihgfedcba
+// Example: ./substitution zyxwvutsrqpomnlkjihgfedcba
 
 int main(int argc, string argv[])
 {
@@ -16,25 +16,31 @@ int main(int argc, string argv[])
     char *loc;
     int index;
 
-    for ( int i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
+        // If input includes a blank space, it remains as a blank space
         if (text[i] == ' ')
         {
             printf(" ");
         }
 
-        else if ( strchr(alphabet, text[i]) )
+        // If input is in uppercase alphabet. Change it with new alphabet. Keep as uppercase.
+        else if (strchr(alphabet, text[i]))
         {
-            loc = strchr( alphabet, text[i] );
-            index = (int) (loc - alphabet);
-            text[i] = sub[index];
+            //Finds out which index position of the uppercase alphabet resides the 'i'th char.
+            loc = strchr(alphabet, text[i]);
+            index = (int)(loc - alphabet);
+            
+            text[i] = toupper(sub[index]);
             printf("%c", text[i]);
         }
-        
-        else if ( strchr(alphabetlower, text[i]) )
+
+        // If the input is in lowercase alphabet. Change it with new alphabet. Keep as lowercase.
+        else if (strchr(alphabetlower, text[i]))
         {
-            loc = strchr( alphabetlower, text[i] );
-            index = (int) (loc - alphabetlower);
+            //Finds out which index position of the lowercase alphabet resides the 'i'th char.
+            loc = strchr(alphabetlower, text[i]);
+            index = (int)(loc - alphabetlower);
             text[i] = tolower(sub[index]);
             printf("%c", text[i]);
         }
