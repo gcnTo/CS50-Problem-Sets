@@ -5,7 +5,7 @@
 #include <math.h>
 #include <ctype.h>
 
-//./substitution zyxwvutsrqpomnlkjihgfedcba
+// Example Terminal Command: ./substitution zyxwvutsrqpomnlkjihgfedcba
 
 int main(int argc, string argv[])
 {
