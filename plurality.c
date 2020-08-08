@@ -80,6 +80,7 @@ bool vote(string name)
     {
         printf("%s has %i votes.\n", candidates[i].name, candidates[i].votes);
     }
+    printf("\n");
         
         
     return false;
