@@ -55,7 +55,7 @@ int main(int argc, string argv[])
         // Check for invalid vote
         if (!vote(name))
         {
-            //printf("This feature doesn't work. But is important somehow. :S\n");
+            //printf("Not a valid vote.\n");
         }
     }
 
@@ -76,10 +76,10 @@ bool vote(string name)
     }
     
     //Check if votes are appointed correctly.
-    /*for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         printf("%s has %i votes.\n", candidates[i].name, candidates[i].votes);
-    }*/
+    }
         
         
     return false;
@@ -92,12 +92,15 @@ void print_winner(void)
     int winner = 0;
     string output;
     for (int i = 0; i < candidate_count; i++)
-        if (winner < candidates[i].votes)
+    {
+        if (winner <= candidates[i].votes)
         {
             winner = candidates[i].votes;
             output = candidates[i].name;
         }
-    printf("%s is the winner\n", output);
+        
+        printf("%s is the winner.\n", output);
+    }
+
     return;
 }
-
