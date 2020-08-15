@@ -5,7 +5,7 @@ My code based on CS50 problem sets.
 Checks if a credit card number is valid. If it's, does it belong to either American Express, MasterCard or VISA.
 
 -Readablity-
-Informs the user about which grade level is a book they pick is aimed to. By taking sample text from the book from the user.
+Informs the user about which grade level is a book they pick is aimed for. By taking sample text from the book from the user.
 
 -Substitution-
 Allows users to create their own alphabet. Converts English letters to letters from the users alphabet.
